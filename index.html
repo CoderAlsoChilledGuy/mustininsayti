@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRWL STARS TƏHLÜKƏSİZLİK TESTİ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ff4444;
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+        button {
+            padding: 20px 40px;
+            font-size: 24px;
+            background: #ffd700;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 30px;
+            transition: 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+            background: #ffeb3b;
+        }
+        #loading {
+            display: none;
+            font-size: 28px;
+            color: yellow;
+            margin-top: 20px;
+        }
+        .warning {
+            font-size: 40px;
+            text-shadow: 2px 2px 4px black;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="warning"></h1>
+    <h2></h2>
+    <p>Zəhmət olmasa təhlükəsizlik yoxlamasını keçin:</p>
+    
+    <button onclick="startHack()">TƏHLÜKƏSİZLİK YOXLAMASI BAŞLAT</button>
+    <div id="loading">YOXLANILIR... 🔍 HACKERLƏRİ DAYANDIRIRIQ!!!</div>
+
+    <script>
+        function startHack() {
+            const button = document.querySelector('button');
+            const loading = document.getElementById('loading');
+            
+            // Buttonu sil
+            button.style.display = 'none';
+            
+            // Loading mesajını göstər
+            loading.style.display = 'block';
+            
+            // 3 saniyə gözlə və mesajı çıxart
+            setTimeout(() => {
+                alert('XƏBƏRDARLIQ: MUSTAFA ADLI İSTİFADƏÇİ SİZİN BRWL STARS HESABINIZI ÇALDI! 🚨\n\nHesabınız indi: 127.0.0.1 IP ünvanında aktivdir!');
+                
+                // Ekranı qırmızı edək (əlavə effekt)
+                document.body.style.backgroundColor = "#cc0000";
+                loading.innerHTML = "HESABINIZ HACK EDİLDİ! 💀<br><small>MUSTAFAYA ŞİFRƏNİ VERMİŞDİNİZ YADINIZDADIR?</small>";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
